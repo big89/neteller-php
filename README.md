@@ -32,6 +32,18 @@ Your must register your application by providing the appropriate detail about it
 
 You are now ready to obtain an access token to use in your REST API request. Please refer to the 'Authentication' section for more information on how to obtain an access token.
 
+## API Endpoints
+
+The NETELLER REST API is available in the sandbox environment for integration testing purposes. To switch between the sandbox and the live production system you only need to change the endpoint URI and the credentials.
+
+The following endpoints form the basis of a resource URI:
+
+    Sandbox (Testing) endpoint - https://test.api.neteller.com
+
+    Production endpoint - https://api.neteller.com
+
+As the sandbox environment is completely isolated, any changes you perform on your sandbox accounts configuration (such as secure IP registration, APP registration) may have to be repeated in your production account.
+
 ## Create an order
 
 The first step in using the NETELLERGO! hosted payment flow, is to create an order. The order may, or may not, contain a detailed list of all items / fees / taxes that you wish to collect payment for. NETELLER recommends you provide as much detail as possible in the order request, as the more detail you can provide, the more likely you customer is to complete the payment as they will have a better understanding of how the total purchase amount was calculated.
