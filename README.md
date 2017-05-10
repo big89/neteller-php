@@ -1,5 +1,37 @@
 # NETELLERgo Hosted Payment
 
+# Getting Started
+
+## Overview
+
+This section outlines some common use scenarios of the NETELLER REST API.
+
+All examples in this section use cURL, which is a command line tool for transferring data using protocols such as HTTPS.
+
+## Obtain your sandbox or production account details
+
+The NETELLER REST API implements the OAUTH2 standard for authentication. Below are the steps to follow when first setting up your application. The same steps should be completed on both sandbox https://test.merchant.neteller.com/ and production https://merchant.neteller.com/ environments. You must complete all of these steps before you can attempt to obtain an access token for use in your REST API request.
+
+1) Verify that NETELLER REST API is enabled for your merchant account.
+
+If the API is not enabled, please contact NETELLER Merchant Support to have it enabled.
+
+![Alt text](https://github.com/paysafegroup/neteller_rest_api_v1/raw/master/images/api-enabled.png "api-enabled")
+
+2) Register the IP addresses that will be allowed to access the API
+
+When registering your secure API IP addresses, you must ensure you are using the IP(s) of your networks outbound gateway. If you are working within a corporate network, or are sitting behind a proxy, you may have to contact your administrator to help identify the appropriate IP address(es)
+
+![Alt text](https://github.com/paysafegroup/neteller_rest_api_v1/raw/master/images/ip-whitelisted.png "ip-whitelisted")
+
+3) Register your application to obtain your API credentials
+
+Your must register your application by providing the appropriate detail about its name, where it will be hosted, and what the primary contact email is to be. You may also choose to upload an application logo that will provide your customers brand recognition if you are planning to implement the authorization flow.
+
+![Alt text](https://github.com/paysafegroup/neteller_rest_api_v1/raw/master/images/application-added.png "application-added")
+
+You are now ready to obtain an access token to use in your REST API request. Please refer to the 'Authentication' section for more information on how to obtain an access token.
+
 ## Create an order
 
 The first step in using the NETELLERGO! hosted payment flow, is to create an order. The order may, or may not, contain a detailed list of all items / fees / taxes that you wish to collect payment for. NETELLER recommends you provide as much detail as possible in the order request, as the more detail you can provide, the more likely you customer is to complete the payment as they will have a better understanding of how the total purchase amount was calculated.
@@ -84,4 +116,8 @@ TND 	    453523858985 	netellertest_TND@neteller.com 	588931 	    NTt3st1!
 TWD 	    451723748785 	netellertest_TWD@neteller.com 	711009 	    NTt3st1!
 USD 	    454651018446 	netellertest_USD@neteller.com 	270955 	    NTt3st1!
 ZAR 	    453523842837 	netellertest_ZAR@neteller.com 	708904 	    NTt3st1!
+
+For detail api integration guide : https://paysafegroup.github.io/neteller_rest_api_v1
+
+For integration help, Contact us : bhagwansahane89@gmail.com
 
